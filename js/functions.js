@@ -632,7 +632,7 @@ $container.imagesLoaded( function(){
 $(document).ready(function (){
 
   $('#forkongithub').mouseover(function() {
-       $.growlUI('', 'T&eacute;l&eacute;charger ce template sur mon github');
+       $.growlUI('', 'T&eacute;l&eacute;charger ce template sur github');
    });
   $('.fb').mouseover(function() {
        $.growlUI('', 'Mon profil');
@@ -640,7 +640,7 @@ $(document).ready(function (){
   $('.tw').mouseover(function() {
        $.growlUI('', 'Ce que je fais actuellement');
    });
-  $('#lin').mouseover(function() {
+  $('.lin').mouseover(function() {
        $.growlUI('', 'Mes r&eacute;f&eacute;rences et mon exp&eacute;rience professionnelle');
    });
 
@@ -688,7 +688,15 @@ $('ul.container li.item a').css({display: 'block'}).show();
 
           $('#forkongithub a').css({display: 'block'}).show();
 
-
+$('li.item').each(function() {
+                $(this).hover(
+                    function() {
+                        $(this).stop().animate({ opacity: 1.0 }, 200);
+                    },
+                   function() {
+                       $(this).stop().animate({ opacity: 0.3 }, 200);
+                   })
+                });
 
 
 });

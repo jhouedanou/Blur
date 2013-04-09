@@ -77,7 +77,40 @@ float: left;
 ul.container li.item a{
   display: none
 }
-
+li.item{
+    /* IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+  /* IE 5-7 */
+  filter: alpha(opacity=30);
+  /* Netscape */
+  -moz-opacity: 0.3;
+  /* Safari 1.x */
+  -khtml-opacity: 0.3;
+  /* Good browsers */
+  opacity: 0.3;
+ -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+li.item:hover{
+    /* IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+  /* IE 5-7 */
+  filter: alpha(opacity=100);
+  /* Netscape */
+  -moz-opacity: 1;
+  /* Safari 1.x */
+  -khtml-opacity: 1;
+  /* Good browsers */
+  opacity: 1;
+ -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
 .coda-nav{
    display:none;
    font-size: 9px;
