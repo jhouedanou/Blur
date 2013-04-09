@@ -74,15 +74,16 @@ float: left;
   height: 80%;
   height: 480px;
 }
-
-
-.coda-slider-wrapper .coda-nav-left{
-  position:fixed;
-  left:15%;
+ul.container li.item a{
+  display: none
 }
-.coda-slider-wrapper .coda-nav-right{
-  position:fixed;
-  right:23%;
+
+.coda-nav{
+   display:none;
+   font-size: 9px;
+    left: 12%;
+    position: absolute;
+    top: 3px;
 }
 .coda-slider-wrapper .coda-slider .panel .panel-wrapper{
     color:#FFF;
@@ -169,7 +170,7 @@ html.cufon-active body div#content.ym-wrapper div.cswrapper div#slider-1-wrapper
       background: url(images/content_bg.png) ;
   float: left;
   text-align:center;
-  padding:2px 0;
+  padding:9px 0 2px 0;
 
 }
 .item:hover{

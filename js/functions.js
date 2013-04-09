@@ -591,20 +591,37 @@
 
 
 $(window).load(function(){
-   $('#msf').html('Bienvenue.')
+   $('#msf').html('Bienvenue.');
    $('#dvLoading').fadeOut(4000);
   $.backstretch("images/DSC02763.png");
  });
+
 $('a.fancybox').colorbox({rel:'group'});
 (function($){})(window.jQuery);
    $(function(){
       $('#slider-1').codaSlider({
-          dynamicTabs:false,
+          dynamicTabs:true,
            dynamicArrows: true
       });
-      //make that badboy slide
-var $container = $('.container');
 
+
+//keyboard nav
+$(document.documentElement).keyup(function (event) {
+        var direction = null;
+    // handle cursor keys
+        if (event.keyCode == 37) {
+        // slide left
+          direction = 'prev';
+        } else if (event.keyCode == 39) {
+        // slide right
+          direction = 'next';
+        }
+        if (direction != null) {
+          $('html.cufon-active body div#content.ym-wrapper div.cswrapper div#slider-1-wrapper.coda-slider-wrapper div.coda-nav ul li a.current').parent()[direction]().find('a').click();
+          }
+        });
+
+  var $container = $('.container');
 $container.imagesLoaded( function(){
   $container.masonry({
     itemSelector : '.item'
@@ -613,7 +630,6 @@ $container.imagesLoaded( function(){
 
 
 $(document).ready(function (){
-
 
   $('#forkongithub').mouseover(function() {
        $.growlUI('', 'T&eacute;l&eacute;charger ce template sur mon github');
@@ -627,22 +643,7 @@ $(document).ready(function (){
   $('#lin').mouseover(function() {
        $.growlUI('', 'Mes r&eacute;f&eacute;rences et mon exp&eacute;rience professionnelle');
    });
-        $(document.documentElement).keyup(function (event) {
-        var direction = null;
-    // handle cursor keys
-    if (event.keyCode == 37) {
-      // go left
-      alert('text');
-      direction = 'prev';
-    } else if (event.keyCode == 39) {
-      // go right
-      direction = 'next';
-    }
 
-    if (direction != null) {
-      $('.coda-slider-wrapper ul a.current').parent()[direction]().find('a').click();
-    }
-  });
 
 });
 
@@ -678,6 +679,13 @@ Cufon.replace('.title',{
             color:'#FFF',
            fontWeight: 'normal'
 });
+Cufon.replace('ul.container li.item a',{
+            color:'#FFF',
+           fontWeight: 'normal'
+});
+$('ul.container li.item a').css({display: 'block'}).show();
+
+
           $('#forkongithub a').css({display: 'block'}).show();
 
 
