@@ -5,6 +5,24 @@
 .ym-wbox {
 
 }
+
+div.growlUI {
+  font-size:12px !important;
+  background: url(images/fx_appiconm.jpg) no-repeat }
+div.growlUI h1, div.growlUI h2 {
+    color: white; padding: 5px 5px 5px 75px;
+    text-align: left;
+      font-size:12px !important;
+
+}
+/* Make links in ajax cart notifications white */
+.growlUI div.messages a:link,
+.growlUI div.messages a:visited,
+.growlUI div.messages a:hover,
+.growlUI div.messages a:active {
+color: #FFFFFF;
+text-decoration: none;
+}
 /* Reset */
 
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,dfn,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
@@ -35,6 +53,9 @@ float: left;
     text-align:left;
     position:relative;
 }
+#cboxOverlay {
+    background: url("images/content_bg.png") repeat scroll 0 0 transparent !important;
+}
 .coda-slider-wrapper .coda-slider{
       /*  background: url(images/content_bg.png) !important;*/
       background:none !important
@@ -48,6 +69,21 @@ float: left;
     -webkit-border-radius: 5px;
             border-radius: 5px;
 }
+.conteny {
+  /* either of these will work for horizontal Isotope layouts */
+  height: 80%;
+  height: 480px;
+}
+
+
+.coda-slider-wrapper .coda-nav-left{
+  position:fixed;
+  left:15%;
+}
+.coda-slider-wrapper .coda-nav-right{
+  position:fixed;
+  right:23%;
+}
 .coda-slider-wrapper .coda-slider .panel .panel-wrapper{
     color:#FFF;
     padding:10px;
@@ -56,7 +92,11 @@ float: left;
 }
 #graph,#webstra,#sites-web,#app{
 }
-.title{
+#titrez{
+  display:none;
+}
+.title{  display:none;
+
           background: url(images/content_bg.png) !important;
 
 }
@@ -100,10 +140,15 @@ div#content {
   margin: 0 auto;
   overflow:hidden;
 }
+
 html.cufon-active body div#content.ym-wrapper div.cswrapper div#slider-1-wrapper.coda-slider-wrapper div#slider-1.coda-slider div.panel-container div#accueil.panel div.panel-wrapper div.logo div#prenolz{
     width: 134px;
 }
+#prenom{
+
+}
 #nom{
+
   text-shadow: 0px 0px 8px #333333;
   color:#FFF}
 .coda-slider-wrapper .coda-nav-left a, .coda-slider-wrapper .coda-nav-right a{
@@ -114,8 +159,29 @@ html.cufon-active body div#content.ym-wrapper div.cswrapper div#slider-1-wrapper
       -moz-border-radius: 30px;
       -webkit-border-radius: 30px;
               border-radius: 30px;
+}
+.container{
+  padding:20px 0 0 0;
+}
+.item {
+  width: 210px;
+  margin: 1px;
+      background: url(images/content_bg.png) ;
+  float: left;
+  text-align:center;
+  padding:2px 0;
 
 }
+.item:hover{
+        background: url(images/blackish.png) !important;
+
+}
+.item img{
+  margin:0 auto;
+  width: 200px;
+  height: auto;
+}
+
 .coda-slider-wrapper .coda-nav-left a:hover, .coda-slider-wrapper .coda-nav-right a:hover{
       background: url(images/blackish.png) !important;
 
@@ -247,7 +313,11 @@ padding: 7px 10px;
 margin-right: 6px;
 float: left;
 }
-
+div.panel-wrapper p{
+  display:none;
+  padding:5px;
+  background:url(images/blackish.png);
+}
 .go{
 padding: 0;
 margin: 0;
@@ -263,12 +333,14 @@ background: url(images/go.png) left bottom no-repeat;
 cursor: pointer;
 
 }
-
+html.cufon-active body span#forkongithub{
+  position:fixed;
+}
 #dvLoading
 {
   color:#FFF;
   font-family: 'Oswald',sans-serif;
-   background:#000 url(images/blackish.png);
+   background:black url(images/image_416659.gif) center 73% no-repeat;
    height: 100%;
    width: 100%;
    position: fixed;
@@ -279,3 +351,60 @@ cursor: pointer;
 #dvLoading p{
     padding:25% 0 0 0;
 }
+/*
+    Colorbox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto; -webkit-overflow-scrolling: touch;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block; max-width:none; -ms-interpolation-mode:bicubic;}
+.cboxIframe{width:100%; height:100%; display:block; border:0;}
+#colorbox, #cboxContent, #cboxLoadedContent{box-sizing:content-box; -moz-box-sizing:content-box; -webkit-box-sizing:content-box;}
+
+/*
+    User Style:
+    Change the following styles to modify the appearance of Colorbox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxOverlay{background:#000;}
+#colorbox{outline:0;}
+    #cboxTopLeft{width:14px; height:14px; background:url(images/controls.png) no-repeat 0 0;}
+    #cboxTopCenter{height:14px; background:url(images/border.png) repeat-x top left;}
+    #cboxTopRight{width:14px; height:14px; background:url(images/controls.png) no-repeat -36px 0;}
+    #cboxBottomLeft{width:14px; height:43px; background:url(images/controls.png) no-repeat 0 -32px;}
+    #cboxBottomCenter{height:43px; background:url(images/border.png) repeat-x bottom left;}
+    #cboxBottomRight{width:14px; height:43px; background:url(images/controls.png) no-repeat -36px -32px;}
+    #cboxMiddleLeft{width:14px; background:url(images/controls.png) repeat-y -175px 0;}
+    #cboxMiddleRight{width:14px; background:url(images/controls.png) repeat-y -211px 0;}
+    #cboxContent{background:#fff; overflow:visible;}
+        .cboxIframe{background:#fff;}
+        #cboxError{padding:50px; border:1px solid #ccc;}
+        #cboxLoadedContent{margin-bottom:5px;}
+        #cboxLoadingOverlay{background:url(images/loading_background.png) no-repeat center center;}
+        #cboxLoadingGraphic{background:url(images/loading.gif) no-repeat center center;}
+        #cboxTitle{position:absolute; bottom:-25px; left:0; text-align:center; width:100%; font-weight:bold; color:#7C7C7C;}
+        #cboxCurrent{position:absolute; bottom:-25px; left:58px; font-weight:bold; color:#7C7C7C;}
+
+        /* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
+        #cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {border:0; padding:0; margin:0; overflow:visible;  position:absolute; bottom:-29px; background:url(images/controls.png) no-repeat 0px 0px; width:23px; height:23px; text-indent:-9999px;}
+
+        /* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
+        #cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {outline:0;}
+
+        #cboxPrevious{left:0px; background-position: -51px -25px;}
+        #cboxPrevious:hover{background-position:-51px 0px;}
+        #cboxNext{left:27px; background-position:-75px -25px;}
+        #cboxNext:hover{background-position:-75px 0px;}
+        #cboxClose{right:0; background-position:-100px -25px;}
+        #cboxClose:hover{background-position:-100px 0px;}
+
+        .cboxSlideshow_on #cboxSlideshow{background-position:-125px 0px; right:27px;}
+        .cboxSlideshow_on #cboxSlideshow:hover{background-position:-150px 0px;}
+        .cboxSlideshow_off #cboxSlideshow{background-position:-150px -25px; right:27px;}
+        .cboxSlideshow_off #cboxSlideshow:hover{background-position:-125px 0px;}
